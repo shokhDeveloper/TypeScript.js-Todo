@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <style>
+        *{
+            user-select: none;
+        }
+        ul{
+            height: 470px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    </style>
+</head>
+  <body class="bg-dark">
+    <header class="p-3 position-fixed top-0 w-100 bg-light text-center zIndex-1">
+        <div class="container">
+            <h2>TypeScript Todo</h2>
+        </div>
+    </header>
+    <template>
+        <li class="todo my-2 bg-light d-flex align-items-center justify-content-between p-2 rounded">
+            <input class="form-check-input todo__check" type="checkbox">
+            <h4 class="todo__name">Name</h4>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-danger btn-sm delete__todo">Delete</button>
+                <button class="btn btn-success ms-2 btn-sm edit__todo">Edit</button>
+            </div>
+        </li>
+    </template>
+    <main>
+        <section class="hero d-flex align-items-center justify-content-center" style="min-height: 60vh; margin-top: 8rem;">
+            <div class="container">
+                <div class="hero__todos w-50 mx-auto">
+                    <div class= "my-4 hero_todos__filter d-flex align-items-center justify-content-between w-50 mx-auto">
+                        <button class="btn btn-primary all__todos">All</button>
+                        <button class="btn btn-success all__complated">Complated</button>
+                        <button class="btn btn-secondary all__notComplated">Not Complated</button>
+                    </div>
+                    <div class="hero_todos__input_box w-100">
+                        <input placeholder="Create Todo" class="form-control hero__input w-50 mx-auto" type="text">
+                    </div>
+                    <ul class="hero_todos__list w-50 mx-auto m-0 p-0 my-3 overflow-scroll">
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- <script src="./node_modules/uuid/dist/commonjs-browser/v4.js"></script> -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./utils.js" ></script>
+    <script src="./index.js" ></script>
+</body>
+</html>
